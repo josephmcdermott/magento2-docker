@@ -16,15 +16,15 @@ Create this file on your host machine: ~/.composer/auth.json:
 Next checkout this repository:
 
 ```
-mkdir project-directory
-cd project-directory
-git clone xxx .
+$ mkdir new-project-directory
+$ cd new-project-directory
+$ git clone git@github.com:josephmcdermott/magento2-docker.git .
 ```
 
 Copy docker-compose.yml.dist to docker-compose.yml:
 
 ```
-cp docker-compose.yml.dist docker-compose.yml
+$ cp docker-compose.yml.dist docker-compose.yml
 ```
 
 At this stage you can modify docker-compose.yml as you require for your Docker engine.
@@ -32,13 +32,13 @@ At this stage you can modify docker-compose.yml as you require for your Docker e
 When you are ready, run the setup:
 
 ```
-docker-compose run --rm setup
+$ docker-compose run --rm setup
 ```
 
 Next copy the Magento files to your local for reference:
 
 ```
-docker cp CONTAINER_NAME:/srv/www ./
+$ docker cp CONTAINER_NAME:/srv/www ./
 ```
 
 ... replacing CONTAINER_NAME with the appdata container name, use docker-compose ps to find it. It should end with _appdata_1.
@@ -52,13 +52,13 @@ Then, uncomment the following in docker-compose.yml:
 And finally restart the container:
 
 ```
-docker-compose up -d app
+$ docker-compose up -d app
 ```
 
 # Magento CLI tool
 
 ```
-docker exec -it CONTAINER_NAME ./bin/magento
+$ docker exec -it CONTAINER_NAME ./bin/magento
 ```
 
 ... replacing CONTAINER_NAME with the phpfpm container name, use docker-compose ps to find it. It should end with _phpfpm_1.
