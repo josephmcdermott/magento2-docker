@@ -29,7 +29,11 @@ Copy docker-compose.yml.dist to docker-compose.yml:
 $ cp docker-compose.yml.dist docker-compose.yml
 ```
 
-At this stage you can modify docker-compose.yml as you require for your Docker engine.
+At this stage you can modify docker-compose.yml as you require for your Docker engine:
+
+- app: You must uncomment and configure either 'environment' or 'ports'.
+- appdata: Leave this commented for now, we will uncomment later.
+- setup: The M2SETUP_BASE_URL must match the above 'environment' or your local DNS entry.
 
 When you are ready, run the setup:
 
