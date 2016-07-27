@@ -13,6 +13,8 @@ Create this file on your host machine: ~/.composer/auth.json:
 }
 ```
 
+If you don't have an access key, you can create one for free by registering for an account at https://marketplace.magento.com/ and once logged in visiting Marketplace > My Access Keys then "Create A New Access Key".
+
 Next checkout this repository:
 
 ```
