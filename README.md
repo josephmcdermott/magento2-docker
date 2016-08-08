@@ -52,7 +52,8 @@ $ docker cp CONTAINER_NAME:/srv/www ./
 Then, uncomment the following in docker-compose.yml:
 
 ```
-/www/app/code:/srv/www/app/code
+/www/app:/srv/www/app
+/www/vendor:/srv/www/vendor
 ```
 
 And finally restart the container:
