@@ -24,8 +24,9 @@ appdata:
     - /srv/www
     - ~/.composer:/var/www/.composer
 
-  # Note: only uncomment this after the initial setup
-#    - ./www/app/code:/srv/www/app/code
+  # Note: only uncomment these after the initial setup
+#    - ./www/app:/srv/www/app
+#    - ./www/vendor:/srv/www/vendor
 
 phpfpm:
   image: mageinferno/magento2-php:7.0.8-fpm-3
