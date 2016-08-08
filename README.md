@@ -49,12 +49,14 @@ $ docker cp CONTAINER_NAME:/srv/www ./
 
 ... replacing CONTAINER_NAME with the appdata container name, use docker-compose ps to find it. It should end with _appdata_1.
 
-Then, uncomment the following in docker-compose.yml:
+Then, uncomment the following as required in docker-compose.yml:
 
 ```
 /www/app:/srv/www/app
 /www/vendor:/srv/www/vendor
 ```
+
+_Note: try to only uncomment the areas you will regularly modify, as performance is impacted with each area that is synced. For example it might be enough to only sync your /www/vendor/your-namespace folder._
 
 And finally restart the container:
 
